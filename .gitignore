@@ -1,0 +1,27 @@
+# Node / npm
+node_modules/
+package-lock.json
+
+# Python / testing
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Screenshots (exclude generated capture artifacts, keep source README refs minimal)
+# Note: screenshots/ is included for portfolio reference but can be excluded if desired
