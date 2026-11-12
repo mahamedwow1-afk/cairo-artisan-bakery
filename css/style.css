@@ -23,8 +23,8 @@
     --color-danger:       #A0432E;
 
     /* Typography */
-    --font-main:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-display: Georgia, 'Times New Roman', serif;
+    --font-main:  'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-display: 'Cairo', Georgia, 'Times New Roman', serif;
     --font-mono:  'Courier New', monospace;
 
     /* Spacing Scale */
@@ -78,7 +78,30 @@ body {
     min-height: 100vh;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.about-image img, .product-image img, .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 ul { list-style: none; }

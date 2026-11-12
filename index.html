@@ -14,12 +14,19 @@
     <meta property="og:description" content="خبز ومخبوزات عربية أصيلة محموصة يومياً بمكونات طبيعية في قلب القاهرة.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_EG">
-    <meta property="og:image" content="https://example.com/images/og-cover.jpg">
+    <meta property="og:image" content="./images/social/og-cover.jpg">
 
     <!-- Favicon placeholder -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='44' rx='22' ry='12' fill='%238B6914'/%3E%3Cellipse cx='32' cy='38' rx='18' ry='14' fill='%23C8A882'/%3E%3Cpath d='M14 38 Q32 14 50 38' stroke='%235C4A1E' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 34 Q32 20 42 34' stroke='%233C2415' stroke-width='1.5' fill='none' opacity='0.3'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='44' rx='22' ry='12' fill='%238B6914'/%3E%3Cellipse cx='32' cy='38' rx='18' ry='14' fill='%23C8A882'/%3E%3Cpath d='M14 38 Q32 14 50 38' stroke='%235C4A1E' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 34 Q32 20 42 34' stroke='%233C2415' stroke-width='1.5' fill='none' opacity='0.3'/%3E%3C/svg%3E">
 
+        <!-- Google Fonts — Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
 </head>
 <body>
     <!-- Skip to content for accessibility -->
@@ -58,7 +65,9 @@
     <main id="main-content">
         <!-- ===== HERO SECTION ===== -->
         <section class="hero" id="hero">
-            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-bg" aria-hidden="true">
+                <img src="images/hero-background.jpg" alt="خلفية مخبز القاهرة اليدوي" loading="lazy">
+            </div>
             <div class="hero-overlay"></div>
             <!-- Decorative bakery pattern SVG -->
             <svg class="hero-illustration" viewBox="0 0 640 160" width="640" height="160" aria-hidden="true">
@@ -117,15 +126,7 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-image">
-                        <div class="image-placeholder about-img-placeholder" role="img" aria-label="صورة الخباز وهو يجهز العجين في المخبز">
-                            <svg class="placeholder-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="14" r="7" fill="#5C4A1E" opacity="0.7"/>
-                                <path d="M10 40 Q24 20 38 40" fill="#8B6914" opacity="0.6"/>
-                                <path d="M14 38 L20 22 M34 38 L28 22" stroke="#5C4A1E" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-                                <circle cx="18" cy="8" r="2" fill="#C8A882" opacity="0.8"/>
-                                <circle cx="30" cy="8" r="2" fill="#C8A882" opacity="0.8"/>
-                            </svg>
-                            <span class="placeholder-caption">الخباز وهو يعد العجين</span>
+                            <img src="images/about/about-baker.jpg" alt="الخباز وهو يجهز العجين في المخبز" loading="lazy">
                         </div>
                     </div>
                     <div class="about-content">
@@ -185,15 +186,7 @@
                 <div class="products-grid">
                     <!-- Product Card 1 -->
                     <article class="product-card" data-category="bread">
-                        <div class="product-image">
-                            <div class="image-placeholder product-img" role="img" aria-label="خبز بلدي طازج">
-                                <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="32" cy="34" rx="26" ry="10" fill="#5C4A1E" opacity="0.15"/>
-                                    <ellipse cx="32" cy="26" rx="24" ry="16" fill="#C8A882"/>
-                                    <path d="M18 22 Q32 14 46 22" stroke="#8B6914" stroke-width="1.5" fill="none" opacity="0.6"/>
-                                    <path d="M22 28 Q32 22 42 28" stroke="#8B6914" stroke-width="1" fill="none" opacity="0.4"/>
-                                </svg>
-                                <span>خبز بلدي</span>
+                        <div class="product-image"><img src="images/products/product-bread-baladi.jpg" alt="خبز بلدي طازج" loading="lazy">
                             </div>
                             <span class="product-badge new">جديد</span>
                         </div>
@@ -209,16 +202,7 @@
 
                     <!-- Product Card 2 -->
                     <article class="product-card" data-category="pastry">
-                        <div class="product-image">
-                            <div class="image-placeholder product-img" role="img" aria-label="فطير مشلتت">
-                                <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="32" cy="36" rx="22" ry="6" fill="#5C4A1E" opacity="0.12"/>
-                                    <path d="M8 28 L32 8 L56 28 L56 38 Q32 44 8 38 Z" fill="#D4B896" stroke="#B8860B" stroke-width="1" opacity="0.9"/>
-                                    <line x1="16" y1="26" x2="48" y2="26" stroke="#8B6914" stroke-width="0.8" opacity="0.4"/>
-                                    <line x1="20" y1="20" x2="44" y2="20" stroke="#8B6914" stroke-width="0.8" opacity="0.4"/>
-                                    <circle cx="32" cy="18" r="3" fill="#B8860B" opacity="0.3"/>
-                                </svg>
-                                <span>فطير مشلتت</span>
+                        <div class="product-image"><img src="images/products/product-fatir-mshaltet.jpg" alt="فطير مشلتت" loading="lazy">
                             </div>
                         </div>
                         <div class="product-info">
@@ -233,16 +217,7 @@
 
                     <!-- Product Card 3 -->
                     <article class="product-card" data-category="bread">
-                        <div class="product-image">
-                            <div class="image-placeholder product-img" role="img" aria-label="خُبز صمون">
-                                <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="32" cy="40" rx="20" ry="5" fill="#5C4A1E" opacity="0.12"/>
-                                    <rect x="10" y="16" width="44" height="24" rx="12" fill="#C8A882"/>
-                                    <path d="M16 24 Q32 18 48 24" stroke="#8B6914" stroke-width="1.2" fill="none" opacity="0.5"/>
-                                    <circle cx="26" cy="30" r="1.5" fill="#8B6914" opacity="0.3"/>
-                                    <circle cx="38" cy="28" r="1.5" fill="#8B6914" opacity="0.3"/>
-                                </svg>
-                                <span>صمون</span>
+                        <div class="product-image"><img src="images/products/product-samoon.jpg" alt="خُبز صمون" loading="lazy">
                             </div>
                         </div>
                         <div class="product-info">
@@ -257,17 +232,7 @@
 
                     <!-- Product Card 4 -->
                     <article class="product-card" data-category="cake">
-                        <div class="product-image">
-                            <div class="image-placeholder product-img" role="img" aria-label="كعكة شعر البيتي">
-                                <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="32" cy="42" rx="24" ry="4" fill="#5C4A1E" opacity="0.1"/>
-                                    <path d="M8 34 L56 34 L52 40 L12 40 Z" fill="#D4B896"/>
-                                    <path d="M12 24 L52 24 L56 34 L8 34 Z" fill="#C8A882"/>
-                                    <path d="M18 14 L46 14 L52 24 L12 24 Z" fill="#EDE0CC"/>
-                                    <circle cx="32" cy="10" r="3" fill="#B8860B" opacity="0.7"/>
-                                    <path d="M20 34 Q32 30 44 34" stroke="#B8860B" stroke-width="0.8" fill="none" opacity="0.5"/>
-                                </svg>
-                                <span>شعر البيتي</span>
+                        <div class="product-image"><img src="images/products/product-shaer-beteo.jpg" alt="كعكة شعر البيتي" loading="lazy">
                             </div>
                             <span class="product-badge bestseller">الأكثر طلباً</span>
                         </div>
@@ -283,15 +248,7 @@
 
                     <!-- Product Card 5 -->
                     <article class="product-card" data-category="savory">
-                        <div class="product-image">
-                            <div class="image-placeholder product-img" role="img" aria-label="فطيرة السبانخ">
-                                <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="32" cy="38" rx="22" ry="7" fill="#5C4A1E" opacity="0.1"/>
-                                    <path d="M6 26 Q32 8 58 26 L56 38 Q32 44 8 38 Z" fill="#4A7C59" opacity="0.6"/>
-                                    <path d="M12 24 Q32 10 52 24" stroke="#4A7C59" stroke-width="1.5" fill="none" opacity="0.8"/>
-                                    <ellipse cx="32" cy="30" rx="18" ry="6" fill="#D4B896" opacity="0.5"/>
-                                </svg>
-                                <span>سبانخ</span>
+                        <div class="product-image"><img src="images/products/product-spinach-pie.jpg" alt="فطيرة السبانخ" loading="lazy">
                             </div>
                         </div>
                         <div class="product-info">
@@ -306,19 +263,7 @@
 
                     <!-- Product Card 6 -->
                     <article class="product-card" data-category="pastry">
-                        <div class="product-image">
-                            <div class="image-placeholder product-img" role="img" aria-label="بسبوسة">
-                                <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="32" cy="42" rx="22" ry="4" fill="#5C4A1E" opacity="0.1"/>
-                                    <rect x="10" y="18" width="44" height="24" rx="3" fill="#F5E6CC" stroke="#D4B896" stroke-width="1"/>
-                                    <line x1="14" y1="30" x2="50" y2="30" stroke="#D4B896" stroke-width="0.8"/>
-                                    <circle cx="18" cy="24" r="1.5" fill="#B8860B" opacity="0.6"/>
-                                    <circle cx="28" cy="24" r="1.5" fill="#B8860B" opacity="0.6"/>
-                                    <circle cx="38" cy="24" r="1.5" fill="#B8860B" opacity="0.6"/>
-                                    <circle cx="46" cy="24" r="1.5" fill="#B8860B" opacity="0.6"/>
-                                    <path d="M22 38 Q32 35 42 38" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.5"/>
-                                </svg>
-                                <span>بسبوسة</span>
+                        <div class="product-image"><img src="images/products/product-saboura.jpg" alt="بسبوسة" loading="lazy">
                             </div>
                         </div>
                         <div class="product-info">
@@ -347,92 +292,25 @@
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item large">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="فرن الطين التقليدي أثناء الخبز">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 40 Q10 18 32 14 Q54 18 54 40 Z" fill="#5C4A1E" opacity="0.5"/>
-                                <path d="M16 40 L16 28 Q32 16 48 28 L48 40" fill="#8B6914" opacity="0.4"/>
-                                <ellipse cx="32" cy="42" rx="20" ry="3" fill="#5C4A1E" opacity="0.2"/>
-                                <path d="M24 30 Q28 24 32 30 Q36 24 40 30" stroke="#B8860B" stroke-width="1.5" fill="none" opacity="0.7"/>
-                            </svg>
-                            <span class="caption">فرن الطين التقليدي</span>
-                        </div>
+                        <div class="image-placeholder gallery-img large" role="img" aria-label="فرن الطين التقليدي أثناء الخبز"><img src="images/gallery/gallery-tandoor.jpg" alt="فرن الطين التقليدي أثناء الخبز" loading="lazy"></div>
                     </div>
                     <div class="gallery-item">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="العجين قبل الخبز">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="32" cy="36" rx="22" ry="8" fill="#5C4A1E" opacity="0.1"/>
-                                <ellipse cx="32" cy="30" rx="20" ry="12" fill="#EDE0CC" stroke="#D4B896" stroke-width="1"/>
-                                <ellipse cx="32" cy="28" rx="14" ry="8" fill="#FDF6EC" opacity="0.8"/>
-                                <path d="M22 26 Q32 22 42 26" stroke="#D4B896" stroke-width="0.8" fill="none" opacity="0.6"/>
-                            </svg>
-                            <span class="caption">العجين جاهز</span>
-                        </div>
+                        <div class="image-placeholder gallery-img " role="img" aria-label="العجين قبل الخبز"><img src="images/gallery/gallery-dough.jpg" alt="العجين قبل الخبز" loading="lazy"></div>
                     </div>
                     <div class="gallery-item">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="تنظيم المخبوزات في عربة المخبز">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="6" y="8" width="52" height="28" rx="3" fill="#EDE0CC" stroke="#C8A882" stroke-width="1.5"/>
-                                <path d="M6 18 L58 18" stroke="#C8A882" stroke-width="1"/>
-                                <ellipse cx="16" cy="42" rx="5" ry="3" fill="#5C4A1E" opacity="0.3"/>
-                                <ellipse cx="48" cy="42" rx="5" ry="3" fill="#5C4A1E" opacity="0.3"/>
-                                <circle cx="18" cy="13" r="3" fill="#D4B896" opacity="0.7"/>
-                                <circle cx="32" cy="13" r="3" fill="#D4B896" opacity="0.7"/>
-                                <circle cx="46" cy="13" r="3" fill="#D4B896" opacity="0.7"/>
-                            </svg>
-                            <span class="caption">عربة العرض</span>
-                        </div>
+                        <div class="image-placeholder gallery-img " role="img" aria-label="تنظيم المخبوزات في عربة المخبز"><img src="images/gallery/gallery-cart.jpg" alt="تنظيم المخبوزات في عربة المخبز" loading="lazy"></div>
                     </div>
                     <div class="gallery-item">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="مكونات الدقيق والنشا">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="20" cy="40" rx="10" ry="4" fill="#5C4A1E" opacity="0.1"/>
-                                <rect x="10" y="16" width="20" height="26" rx="2" fill="#F5E6CC" stroke="#D4B896" stroke-width="1"/>
-                                <line x1="14" y1="24" x2="26" y2="24" stroke="#D4B896" stroke-width="0.8"/>
-                                <line x1="14" y1="30" x2="26" y2="30" stroke="#D4B896" stroke-width="0.8"/>
-                                <ellipse cx="44" cy="38" rx="8" ry="8" fill="#EDE0CC" stroke="#C8A882" stroke-width="1"/>
-                                <circle cx="44" cy="38" r="4" fill="#FDF6EC" opacity="0.6"/>
-                            </svg>
-                            <span class="caption">أجود أنواع الدقيق</span>
-                        </div>
+                        <div class="image-placeholder gallery-img " role="img" aria-label="مكونات الدقيق والنشا"><img src="images/gallery/gallery-flour.jpg" alt="مكونات الدقيق والنشا" loading="lazy"></div>
                     </div>
                     <div class="gallery-item tall">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="خبز بلدي طازج يخرج من الفرن">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="32" cy="42" rx="24" ry="4" fill="#5C4A1E" opacity="0.1"/>
-                                <ellipse cx="32" cy="28" rx="22" ry="14" fill="#C8A882"/>
-                                <path d="M20 22 Q32 16 44 22" stroke="#8B6914" stroke-width="1.2" fill="none" opacity="0.6"/>
-                                <path d="M24 30 Q32 26 40 30" stroke="#8B6914" stroke-width="1" fill="none" opacity="0.4"/>
-                                <path d="M28 10 Q30 4 32 10" stroke="#C8A882" stroke-width="1.5" fill="none" opacity="0.5"/>
-                                <path d="M36 10 Q38 4 40 10" stroke="#C8A882" stroke-width="1" fill="none" opacity="0.4"/>
-                            </svg>
-                            <span class="caption">خرج للتو من الفرن</span>
-                        </div>
+                        <div class="image-placeholder gallery-img tall" role="img" aria-label="خبز بلدي طازج يخرج من الفرن"><img src="images/gallery/gallery-freshbread.jpg" alt="خبز بلدي طازج يخرج من الفرن" loading="lazy"></div>
                     </div>
                     <div class="gallery-item">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="فطور عربي تقليدي">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="32" cy="42" rx="16" ry="4" fill="#5C4A1E" opacity="0.1"/>
-                                <path d="M16 18 L48 18 L44 38 L20 38 Z" fill="#EDE0CC" stroke="#C8A882" stroke-width="1.2"/>
-                                <path d="M48 22 Q54 24 54 28 Q54 32 48 34" stroke="#C8A882" stroke-width="1" fill="none"/>
-                                <path d="M24 14 Q26 10 24 6" stroke="#C8A882" stroke-width="1" fill="none" opacity="0.6"/>
-                                <path d="M32 14 Q34 10 32 6" stroke="#C8A882" stroke-width="1" fill="none" opacity="0.6"/>
-                                <path d="M40 14 Q42 10 40 6" stroke="#C8A882" stroke-width="1" fill="none" opacity="0.6"/>
-                            </svg>
-                            <span class="caption">فطور صباحي</span>
-                        </div>
+                        <div class="image-placeholder gallery-img " role="img" aria-label="فطور عربي تقليدي"><img src="images/gallery/gallery-breakfast.jpg" alt="فطور عربي تقليدي" loading="lazy"></div>
                     </div>
                     <div class="gallery-item">
-                        <div class="image-placeholder gallery-img" role="img" aria-label="حشوات الفطائر الطازجة">
-                            <svg class="placeholder-icon" viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="32" cy="42" rx="24" ry="4" fill="#5C4A1E" opacity="0.1"/>
-                                <ellipse cx="32" cy="28" rx="22" ry="12" fill="#D4B896" opacity="0.7"/>
-                                <ellipse cx="32" cy="26" rx="16" ry="8" fill="#C8A882" opacity="0.6"/>
-                                <circle cx="22" cy="28" r="2" fill="#4A7C59" opacity="0.5"/>
-                                <circle cx="32" cy="26" r="2" fill="#B8860B" opacity="0.5"/>
-                                <circle cx="42" cy="28" r="2" fill="#5C4A1E" opacity="0.4"/>
-                            </svg>
-                            <span class="caption">حشوات متنوعة</span>
-                        </div>
+                        <div class="image-placeholder gallery-img " role="img" aria-label="حشوات الفطائر الطازجة"><img src="images/gallery/gallery-fillings.jpg" alt="حشوات الفطائر الطازجة" loading="lazy"></div>
                     </div>
                 </div>
             </div>
@@ -526,11 +404,7 @@
                         </ul>
                         <div class="social-links">
                             <span class="social-label">تابعونا</span>
-                            <a href="#" class="social-link" aria-label="فيسبوك" title="صفحتنا على فيسبوك">ف</a>
-                            <a href="#" class="social-link" aria-label="انستقرام" title="حسابنا على انستقرام">ا</a>
-                            <a href="#" class="social-link" aria-label="تويتر" title="حسابنا على تويتر">ت</a>
-                            <a href="#" class="social-link" aria-label="واتساب" title="تواصل معنا عبر واتساب">و</a>
-                        </div>
+                            </div>
                     </div>
 
                     <div class="contact-form-wrapper">
@@ -632,8 +506,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; ٢٠٢٥ مخبز القاهرة اليدوي — موقع تجريبي للعرض. جميع الحقوق محفوظة.</p>
-                <p>موقع تجريبي لعرض قدرات وكالة AI</p>
+                <p>&copy; ٢٠٢٦ مخبز القاهرة اليدوي — تصميم وتنفيذ وكالة الذكاء الاصطناعي. جميع الحقوق محفوظة.</p>
+                <p class="disclosure">هذا الموقع مشروع تجريبي تعليمي؛ المعلومات الواردة فيه لأغراض التوضيح فقط.</p>
             </div>
         </div>
     </footer>
