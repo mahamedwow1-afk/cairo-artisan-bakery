@@ -693,6 +693,13 @@ address { font-style: normal; }
     font-size: 1rem;
 }
 
+
+.product-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
 /* ─── Gallery Section ─── */
 .gallery-grid {
     display: grid;
@@ -976,6 +983,12 @@ address { font-style: normal; }
     transform: translateY(0);
 }
 
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 /* ─── Responsive Breakpoints ─── */
 @media (max-width: 1024px) {
     :root {
@@ -1085,6 +1098,14 @@ address { font-style: normal; }
     .hero-actions .btn { width: 100%; }
     .about-values { grid-template-columns: 1fr; }
     .contact-form-wrapper { padding: var(--space-md); }
+}
+
+/* Scroll lock when mobile nav is open */
+body.modal-scroll-lock {
+    overflow: hidden !important;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 /* ─── Print Styles ─── */

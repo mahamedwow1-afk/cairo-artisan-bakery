@@ -10,28 +10,61 @@
     /* ─── Mobile Navigation Toggle ─── */
     const navToggle = document.querySelector('.nav-toggle');
     const navList   = document.getElementById('nav-menu');
+    let scrollYLocked = 0;
+
+    function lockScroll() {
+        scrollYLocked = window.scrollY;
+        document.body.style.overflow  = 'hidden';
+        document.body.style.position  = 'fixed';
+        document.body.style.top       = -scrollYLocked + 'px';
+        document.body.style.width     = '100%';
+    }
+
+    function unlockScroll() {
+        document.body.style.overflow  = '';
+        document.body.style.position  = '';
+        document.body.style.top       = '';
+        document.body.style.width     = '';
+        window.scrollTo(0, scrollYLocked);
+    }
+
+    function closeMenu() {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navList.classList.remove('open');
+        unlockScroll();
+    }
 
     if (navToggle && navList) {
         navToggle.addEventListener('click', function () {
             const expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', String(!expanded));
             navList.classList.toggle('open');
+            if (navList.classList.contains('open')) {
+                lockScroll();
+            } else {
+                unlockScroll();
+            }
         });
 
         // Close menu when a link is clicked
         navList.querySelectorAll('.nav-link').forEach(function (link) {
             link.addEventListener('click', function () {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navList.classList.remove('open');
+                closeMenu();
             });
         });
 
         // Close on Escape key
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && navList.classList.contains('open')) {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navList.classList.remove('open');
+                closeMenu();
                 navToggle.focus();
+            }
+        });
+
+        // Close when clicking outside the menu
+        document.addEventListener('click', function (e) {
+            if (navList.classList.contains('open') && !navList.contains(e.target) && !navToggle.contains(e.target)) {
+                closeMenu();
             }
         });
     }
